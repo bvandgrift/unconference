@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
   let(:auth) { { 'provider' => 'test',
                  'uid' => 'test_user',
-                 'user_info' => { 'name' => 'joe' }
+                 'info' => { 'name' => 'joe' }
   } }
   context "#register" do
 

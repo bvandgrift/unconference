@@ -6,5 +6,16 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = link_to "Auth With Twitter", '/auth/twitter'
-    = yield
+    .content
+      .container
+        .auth
+          - if authenticated?
+            signed in as 
+            = current_user.name || "Somebody(#{current_user.id})"
+          - else
+            = link_to "Auth With Twitter", '/auth/twitter'
+        - if notice
+          .flash-notice= notice
+        - if alert
+          .flash-alert= alert
+        = yield
