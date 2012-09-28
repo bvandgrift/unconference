@@ -1,0 +1,4 @@
+auth:
+  twitter:
+    key: COMSUMER_SECRET
+    secret: CONSUMER_KEY
