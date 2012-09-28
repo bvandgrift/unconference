@@ -7,5 +7,8 @@ class CreateRegistrations < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :registrations, [:provider, :uid]
+    add_index :registrations, :user_id
   end
 end
