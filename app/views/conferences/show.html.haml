@@ -1,0 +1,9 @@
+.name
+  = @conference.name
+.date
+  = @conference.starts_at
+
+%ul.actions
+  %li= link_to "Edit", edit_conference_path(@conference)
+  %li= link_to "Destroy", @conference, :confirm => 'Are you sure?', :method => :delete
+  %li= link_to "View All", conferences_path
